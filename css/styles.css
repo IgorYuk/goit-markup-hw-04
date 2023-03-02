@@ -117,8 +117,6 @@ body {
   color: var(--accent-color);
 }
 
-/* .header-nav .link.current  */
-
 .header-container,
 .header-nav,
 .menu,
@@ -142,8 +140,6 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 /* ================== HEADER / =================== */
@@ -217,6 +213,7 @@ body {
   height: 112px;
   background-color: var(--main-background-color);
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .icon-svg {
@@ -337,31 +334,39 @@ body {
 
 .fifth-section {
   padding-top: 130px;
-}
-
-.fifth-section-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 168px;
-  height: 88px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
+  padding-bottom: 120px;
 }
 
 .fifth-section-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 120px;
 }
 
-.customers-icon:hover,
-.customers-icon:focus {
-  fill: var(--accent-color);
+.fifth-section-item {
+  width: 168px;
+  height: 88px;
+}
+
+.fifth-section-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
 }
 
 .customers-icon {
   fill: #afb1b8;
+}
+
+.fifth-section-link:is(:hover, :focus) {
+  border-color: var(--accent-color);
+}
+
+.fifth-section-link:is(:hover, :focus) .customers-icon {
+  fill: var(--accent-color);
 }
 
 /* ================== FIFTH SECTION / =================== */
@@ -443,14 +448,13 @@ body {
   border-top: none;
 }
 
-.portfolio-project-item:hover,
-.portfolio-project-item:focus {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
 .portfolio-project-descr {
   color: var(--description-color);
+}
+
+.portfolio-project-item:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /* ================== PORTFOLIO / =================== */
@@ -492,6 +496,10 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.footer-media-link:is(:hover, :focus) {
+  background-color: #31d0aa;
+}
+
 .footer-social-media {
   padding-left: 0%;
   justify-content: left;
@@ -508,6 +516,6 @@ body {
 }
 
 .social-media {
-  padding-left: 120px;
+  margin-left: 120px;
 }
 /* ================== FOOTER / =================== */
